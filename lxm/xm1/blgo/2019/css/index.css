@@ -1,0 +1,463 @@
+html {
+    /* 375PX设计稿：1REM=100PX */
+    font-size: 100px;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+/* 音乐按钮 */
+.mainBox .musicBox{
+    position: absolute;
+    top: .15rem;
+    right: .15rem;
+    width: .3rem;
+    height: .3rem;
+    background: url('../image/music.svg') no-repeat;
+    background-size: 100% 100%;
+    z-index: 999;
+    }
+.mainBox .musicBox.move{
+    animation: musicMove 1s linear infinite both;
+    }
+@keyframes musicMove{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.mainBox {
+    position: relative;
+    margin: 0 auto;
+    max-width: 750px;
+    height: 100%;
+}
+/* 提示小按钮 */
+.mainBox .previousTip{
+    position: absolute;
+    width: .25rem;
+    height: .2rem;
+    bottom: .25rem;
+    left: 50%;
+    margin-left: -.125rem;
+    z-index: 9999999;
+    background: url('../image/arrow.png') no-repeat;
+    background-size: 100% 100%;
+    /* 匀速 */
+    animation: previousTipMove 1s infinite both;
+   
+}
+
+@keyframes previousTipMove{
+    0%{
+        transform: translateY(0)
+    }
+    100%{
+        transform: translateY(-.25rem);
+    }
+}
+
+.swiper-container,
+.swiper-slide {
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+
+
+/* ==PAGE4== */
+.page4{
+    background: url('../image/22.jpg') no-repeat;
+    background-size: cover;
+}
+.page4>img {
+    position: absolute;
+}
+.page4>img:nth-of-type(1) {
+    left: 0.2rem;
+    top: 2rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4>img:nth-of-type(2) {
+    left: 1.3rem;
+    top: 2rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4>img:nth-of-type(3) {
+    left: 2.4rem;
+    top: 2rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4>img:nth-of-type(4) {
+    left: 0.2rem;
+    top: 3.3rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4>img:nth-of-type(5) {
+    left: 1.3rem;
+    top: 3.3rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4>img:nth-of-type(6) {
+    left: 2.4rem;
+    top: 3.3rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4>img:nth-of-type(7) {
+    left: 0.2rem;
+    top: 4.6rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4>img:nth-of-type(8) {
+    left: 1.3rem;
+    top: 4.6rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4>img:nth-of-type(9) {
+    left: 2.4rem;
+    top: 4.6rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page4 .text{
+    position: absolute;
+    top: .7rem;
+    left:.8rem ;
+}
+
+.page4 .text p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: .45rem;
+    font-size: .3rem;
+    color: crimson;
+}
+
+
+
+
+
+/* ==PAGE5== */
+.page5{
+    background: url('../image/hong1.jpg') no-repeat;
+    background-size: cover;
+}
+.page5 .wenzi{
+    position: absolute;
+    top: .8rem;
+    left: .4rem;
+}
+
+.page5 .wenzi p{
+    line-height: .30rem;
+    font-size: .16rem;
+    color:#ffffff;
+}
+
+/* ==PAGE6== */
+.page6{
+    background: url('../image/hong2.jpg') no-repeat;
+    background-size: cover;
+}
+.page6 .zhufu{
+    position: absolute;
+    top: .8rem;
+    left: 1rem;
+}
+
+.page6 .zhufu p{
+    line-height: .30rem;
+    font-size: .16rem;
+    color:#ffffff;
+}
+
+.page6 .zhufuyu{
+    position: absolute;
+    top: 1.7rem;
+    left: 1rem;
+}
+
+.page6 .zhufuyu p{
+    line-height: .30rem;
+    font-size: .16rem;
+    color:#ffffff;
+}
+
+.page6 img{
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+    width: 1.5rem;
+    height:1.5rem ;
+}
+/* ==PAGE7== */
+.page7{
+    background: url('../image/liu.jpg') no-repeat;
+    background-size: cover;
+}
+
+.page7 .shiguang{
+    position: absolute;
+    top: 1.5rem;
+    right: .3rem;
+}
+
+.page7 .shiguang p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: .45rem;
+    font-size: .3rem;
+    color:#ffffff;
+}
+/* ==PAGE8== */
+.page8{
+    background: url('../image/bai.jpg') no-repeat;
+    background-size: cover;
+}
+
+.page8>img {
+    position: absolute;
+}
+.page8>img:nth-of-type(1) {
+    left: 0.2rem;
+    top: 2rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8>img:nth-of-type(2) {
+    left: 1.3rem;
+    top: 2rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8>img:nth-of-type(3) {
+    left: 2.4rem;
+    top: 2rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8>img:nth-of-type(4) {
+    left: 0.2rem;
+    top: 3.3rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8>img:nth-of-type(5) {
+    left: 1.3rem;
+    top: 3.3rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8>img:nth-of-type(6) {
+    left: 2.4rem;
+    top: 3.3rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8>img:nth-of-type(7) {
+    left: 0.2rem;
+    top: 4.6rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8>img:nth-of-type(8) {
+    left: 1.3rem;
+    top: 4.6rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8>img:nth-of-type(9) {
+    left: 2.4rem;
+    top: 4.6rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
+.page8 .text{
+    position: absolute;
+    top: .7rem;
+    left:1rem ;
+}
+.page8 .text p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: .45rem;
+    font-size: .2rem;
+    color: crimson;
+}
+
+/* ==PAGE9== */
+.page9{
+    background: url('../image/bai.jpg') no-repeat;
+    background-size: cover;
+}
+.page9 img{
+    position: absolute;
+}
+.page9>img:nth-of-type(1){
+    display: block;
+    top: 0rem;
+    left: 0rem;
+    width:3.73rem ;
+    height: 2.5rem;
+}
+.page9>img:nth-of-type(2){
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 2.6rem;
+    left: .2rem;
+}
+.page9>img:nth-of-type(3){
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 2.6rem;
+    right:.2rem ;
+}
+.page9>img:nth-of-type(4){
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 4.5rem;
+    left: .2rem;
+}
+.page9>img:nth-of-type(5){
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 4.5rem;
+    right:.2rem ;
+}
+.page9>img:nth-of-type(6){
+    display: block;
+    width: 1.24rem;
+    height: .96rem;
+    top: 2.945rem;
+    left: .37rem;
+}
+.page9>img:nth-of-type(7){
+    display: block;
+    width: 1.24rem;
+    height: .96rem;
+    top: 2.94rem;
+    right: .3rem;
+    
+}
+.page9>img:nth-of-type(8){
+    display: block;
+    width: 1.25rem;
+    height: .96rem;
+    top: 4.84rem;
+    left: .37rem;
+}
+.page9>img:nth-of-type(9){
+    display: block;
+    width: 1.23rem;
+    height: .96rem;
+    top: 4.85rem;
+    right: .29rem;
+}
+.page9 .text{
+    position: absolute;
+    top: 4.1rem;
+    left: .8rem;
+}
+
+.page9 .text p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: .45rem;
+    font-size: .2rem;
+    color: crimson;
+}
+.page10{
+    background: url('../image/part3-2.jpg') no-repeat;
+    background-size: cover;
+}
+.page10 img{
+    position: absolute;
+}
+.page10>img:nth-of-type(1){
+    display: block;
+    top: 0rem;
+    left: 0rem;
+    width:3.73rem ;
+    height: 2.5rem;
+}
+.page10>img:nth-of-type(2){
+    left: 0.1rem;
+    top: 2.53rem;
+    width: 1.55rem;
+    height: 1.3rem;
+}
+.page10>img:nth-of-type(3){
+    right: .1rem;
+    top: 2.53rem;
+    width: 1.55rem;
+    height: 1.3rem;
+}
+.page10>img:nth-of-type(4){
+    left: 0.1rem;
+    top: 3.85rem;
+    width: 1.55rem;
+    height: 1.3rem;
+}
+
+.page10>img:nth-of-type(5){
+    right: .1rem;
+    top: 3.85rem;
+    width: 1.55rem;
+    height: 1.3rem;
+}
+.page10>img:nth-of-type(6){
+    left: 0.1rem;
+    top: 5.2rem;
+    width: 1.55rem;
+    height: 1.3rem;
+    
+}
+
+.page10>img:nth-of-type(7){
+    right: .1rem;
+    top: 5.2rem;
+    width: 1.55rem;
+    height: 1.3rem;
+}
+.page10 .text{
+    position: absolute;
+    top: 2.52rem;
+    right: 1.7rem;
+}
+
+.page10 .text p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: .17rem;
+    font-size: .2rem;
+    color: crimson;
+}
+
+/* 在某些特定宽高的手机中,可能发生宽高重叠,此时我们基于@media进行微调 */
+/* 必须有空格 */
+@media all and (max-height:500px){
+    .page2 .photo{
+        bottom: .7rem;
+    }
+    .page2>img:nth-of-type(5),
+    .page2>img:nth-of-type(6),
+    .page2>img:nth-of-type(7){
+        bottom: .05rem;
+    }
+}
+
