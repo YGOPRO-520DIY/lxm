@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: "微软雅黑";
+}
+.menu {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+}
+.menu * {
+  box-sizing: border-box;
+}
+.menu .center {
+  width: 1200px;
+}
+.menu .ul-list {
+  display: flex;
+}
+.menu .ul-list > li {
+  flex: 1;
+  border-right: 1px solid #333;
+  position: relative;
+}
+.menu .ul-list > li:last-child {
+  border-right: none;
+}
+.menu .ul-list > li > a {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  background: #222;
+}
+.menu .ul-list > li > span {
+  color: #fff;
+  font-size: 14px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+.menu .ul-list > li:hover .ol-list {
+  display: block;
+}
+.menu .ol-list {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  z-index: 999;
+  background: #333;
+  width: 100%;
+}
+.menu .ol-list > li > a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  justify-content: center;
+}
+.menu .ol-list > li > a:hover {
+  background: #222;
+}

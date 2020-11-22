@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			input{
+				margin-bottom: 10px;
+			}
+			#div{
+				width:500px;
+				height: 500px;
+				background: pink;
+				display: flex;
+				flex-wrap: wrap;
+				
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				/*background: white;*/
+				border: solid 1px white;
+				margin: 20px 0px;
+				/*float: left;*/
+			}
+			p{
+				margin-top: 10px;
+				width: 100px;
+				height: 20px;
+				background-color: white;
+				text-align: center;
+			}
+			.col{
+				background: yellow;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="" placeholder="请输入心愿"/><br />
+		<button id="sub">提交</button>
+		<div id="div">
+			
+		</div>
+	</body>
+	<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//添加
+		$("#sub").click(function(){
+			let inp=$("input").eq(0).val();
+			$.ajax({
+				type:"post",
+				url:"http://localhost:8080/add",
+				data:{inp:inp},
+				success(res){
+					console.log(res)
+					inpt()
+				}
+			});
+		})
+		
+		//渲染
+		inpt()
+		function inpt(){
+			$.ajax({
+				type:"get",
+				url:"http://localhost:8080/msg",
+				success(res){
+					var str="";
+					for (var i = 0; i < res.length; i++) {
+						str+=`
+						   <div class="box">
+								<p><a href="#" onclick=del("${res[i]._id}")>删除</a></p>
+								<p><span>${res[i].inp}</span></p>
+							`	
+							if(res[i].bala==0){
+								str+=`		
+								
+										<p onclick=ubd("${res[i]._id}") >√</p>
+									</div>
+								`
+							}else {
+								str+=`		
+										<p onclick=ubd("${res[i]._id}") class="col">√</p>
+									</div>
+								`
+							}
+					}
+					$("#div").html(str)
+				}
+			});
+		}
+		
+		
+		//删除
+		function del(id){
+			console.log(id)
+			$.ajax({
+				type:"post",
+				url:"http://localhost:8080/del",
+				data:{id:id},
+				success(res){
+					console.log(res)
+					inpt()
+				}
+			});
+		}
+		
+		//变颜色
+		function ubd(id){
+			console.log(id)
+			$.ajax({
+				type:"post",
+				url:"http://localhost:8080/colo",
+				data:{id:id},
+				success(res){
+					console.log(res)
+					inpt()
+				}
+			});
+		}
+	</script>
+</html>
